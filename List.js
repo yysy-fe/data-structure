@@ -80,6 +80,10 @@ class List {
     moveTo(pos) {
         this._pos = pos;
     }
+
+    getElement() {
+        return this._list[this._pos];
+    }
 }
 
 let list = new List();
