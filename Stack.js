@@ -41,4 +41,22 @@ function mulBase(num, base) {
     return str;
 }
 
-console.log(mulBase(8,2))
+console.log(mulBase(8,2));
+
+// 判断是否是回文  dad racecar
+
+function reStr(str) {
+    let finalStr = '';
+    let stack = new Stack;
+    str += '';
+    for (let i = 0; i < str.length; i++) {
+        stack.push(str[i]);
+    }
+    while(stack.length()) {
+        finalStr += stack.pop();
+    }
+
+    return str === finalStr;
+}
+
+console.log(reStr('racecar'))
