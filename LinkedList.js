@@ -91,6 +91,7 @@ function reverseLList(llist) {
         headNode.next = nextNode;
         nextNode = currentNode.next;
     }
+    
     //first
     // currentNode.next = nextNode.next;
     // nextNode.next = headNode.next;
