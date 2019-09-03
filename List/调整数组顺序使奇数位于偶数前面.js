@@ -13,7 +13,7 @@
 
 let testArr = [1,2,3,4,5,6,7,8,9];
 
-const handle = arr => {
+const handler = arr => {
   const len = arr.length;
   let left = 0, right = len - 1;
   while ( left < right ) {
@@ -34,5 +34,5 @@ const handle = arr => {
   return arr;
 }
 
-const res = handle(testArr);
+const res = handler(testArr);
 console.log('result', res);
