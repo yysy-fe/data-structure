@@ -68,7 +68,7 @@ llist.insert('g', 'f');
 // llist.remove('e')
 // llist.display();
 
-// 找到倒数第3个节点
+// 找到倒数第n个节点
 function findLastKNode(llist, k) {
   let currentNode = llist.head;
   let resNode = llist.head;
@@ -91,30 +91,17 @@ function reverseLList(llist) {
   let currentNode = llist.head.next;
   let nextNode = currentNode.next;
   let flag = 0;
-  while (nextNode) {
+  while (nextNode !== null) {
+    // 不断的把下一个节点移动到head后面， 知道下一个节点为null停止
     currentNode.next = nextNode.next;
     nextNode.next = headNode.next;
     headNode.next = nextNode;
     nextNode = currentNode.next;
   }
-
-  //first
-  // currentNode.next = nextNode.next;
-  // nextNode.next = headNode.next;
-  // headNode.next = nextNode;
-  // nextNode = currentNode.next;
-  // console.log(JSON.stringify(headNode))
-
-  //second
-  // currentNode.next = nextNode.next;
-  // nextNode.next = headNode.next;
-  // headNode.next = nextNode;
-  // nextNode = currentNode.next;
-  // console.log(JSON.stringify(headNode))
 }
 
-reverseLList(llist);
-llist.display();
+// reverseLList(llist);
+// llist.display();
 
 
 
@@ -126,6 +113,10 @@ class Node1 {
   }
 }
 
+
+/**
+ *  双向链表
+ */
 class DoublyLList {
   constructor() {
     this.head = new Node1('head');
@@ -167,6 +158,7 @@ class DoublyLList {
     return currentNode;
   }
 
+  // 链表倒叙输出
   displayReverse() {
     let currentNode = this.findLast();
     while (currentNode.prev != null) {
@@ -175,6 +167,7 @@ class DoublyLList {
     }
   }
 
+  // 链表正向输出
   display() {
     let currentNode = this.head;
     while (currentNode.next != null) {
@@ -189,3 +182,5 @@ doublyLList.insert('a', 'head');
 doublyLList.insert('b', 'a');
 doublyLList.insert('c', 'b');
 // doublyLList.displayReverse();
+// doublyLList.display();
+
