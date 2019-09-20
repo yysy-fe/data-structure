@@ -17,7 +17,7 @@
 
 const testArr = [7,6,8,3,9,5,10,2,4,1,11,2,6,8,6];
 
-const creatMaxHeap = (arr) => {
+const createMaxHeap = (arr) => {
   let len = arr.length;
   let lastRootNodeIndex = Math.floor((len - 3 + 1) / 2) / 2;
   for (let i = lastRootNodeIndex; i >= 0; i--) { 
@@ -38,7 +38,7 @@ const creatMaxHeap = (arr) => {
   }
   return arr;
 }
-const result = creatMaxHeap(testArr);
+const result = createMaxHeap(testArr);
 console.log(result)
 
 
