@@ -12,7 +12,7 @@
  * 1) 左孩子为 length - 1; length - 1 = 2n + 1   -->   n = (length - 2) / 2    
  * 2) 左孩子为 length - 2; length - 2 = 2n + 1   -->   n = (length - 3) / 2  length为奇数  等价于 Math.floor((length - 3 + 1) / 2)
  * 
- * 所以最后一个非叶子节点n 为 n = (length - 3) / 2;
+ * 所以最后一个非叶子节点n 为 n = Math.floor((length - 3 + 1) / 2);
  */
 
 const testArr = [7,6,8,3,9,5,10,2,4,1,11,2,6,8,6];
